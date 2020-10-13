@@ -1,0 +1,50 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Video thing!</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/video-script-from-mdn.js" defer></script>
+<script src="/gregs-script-for-pete.js" defer></script>
+<figure id="videoContainer" data-fullscreen="false">
+	<video id="video" preload="metadata" poster="poster.jpg" class="special-video-that-can-have-cue-points-added">
+		<source src="tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
+<!--		<source src="tears-of-steel-battle-clip-medium.webm" type="video/webm">-->
+<!--		<source src="tears-of-steel-battle-clip-medium.ogg" type="video/ogg">-->
+		<a href="tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
+	</video>
+
+	<ul id="video-controls" class="controls">
+		<li><button id="playpause" type="button">Play/Pause</button></li>
+		<li><button id="stop" type="button">Stop</button></li>
+		<li class="progress">
+			<progress id="progress" value="0" min="0">
+				<span id="progress-bar"></span>
+			</progress>
+		</li>
+		<li><button id="mute" type="button">Mute/Unmute</button></li>
+		<li><button id="volinc" type="button">Vol+</button></li>
+		<li><button id="voldec" type="button">Vol-</button></li>
+		<li><button id="fs" type="button">Fullscreen</button></li>
+	</ul>
+
+	<figcaption>
+		&copy; Blender Foundation | <a href="http://mango.blender.org">mango.blender.org</a>
+	</figcaption>
+</figure>
+
+<div class="cuepoint-content">
+	<section data-timeshow="2" data-duration="5">
+		<h1>Section 1!</h1>
+		<p>This section appears after 2 seconds and has a duration of 5 seconds.</p>
+		<p>There will be a 3 second gap until section two.</p>
+	</section>
+	<section data-timeshow="10">
+		<h1>Here's section 2!</h1>
+		<p>I've put a data-timeshow attribute but no data-duration attribute.</p>
+		<p>In this case, the section should display until the next one is due, which is at 20 seconds.</p>
+	</section>
+	<section data-timeshow="20" data-duration="10">
+		<h1>Here's the 3rd and final section!</h1>
+		<p>This section should show for 10 seconds.</p>
+		<p>I have nothing else to say apart from have a wonderful day.</p>
+	</section>
+</div>
