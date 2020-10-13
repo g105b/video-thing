@@ -1,0 +1,55 @@
+body {
+	display: flex;
+	margin: 4rem;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	width: 50%;
+}
+
+figure>button {
+	display: block;
+	padding: 4rem;
+	margin: 4rem auto;
+	font-size: 2rem;
+	background: #d20d0d;
+	color: white;
+}
+
+figure>button:focus,figure>button:hover {
+	outline: 1rem solid orange;
+}
+
+figure>button:active {
+	transform: translateY(2px);
+}
+
+video {
+	width: 100%;
+}
+
+#video-controls {
+	display: flex !important; /* For some reason the MDN example JS overrides this */
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#video-controls li {
+}
+
+#video-controls li.progress {
+	flex-grow: 3;
+}
+
+#video-controls li.progress progress {
+	width: 100%;
+}
+
+#video-controls li button {
+	width: 100%;
+}
